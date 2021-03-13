@@ -101,17 +101,17 @@ for event in Lslongpoll.listen():
 
         if event.text == 'Ассортимент':
             if event.from_user:
-                logging.info("Second Thread start")
                 x = threading.Thread(target=menu)
                 x.start()
-                logging.info("Second Thread finish")
 
         vars3 = ['Помощь', 'помощь']
         if event.text in vars3:
             if event.from_user:
                 if event.from_user:
+                    logging.info("Second Thread start")
                     x = threading.Thread(target=help)
                     x.start()
+                    logging.info("Second Thread finish")
 
         if event.text == 'Список городов':
             if event.from_user:
